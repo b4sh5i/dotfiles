@@ -6,6 +6,7 @@ sudo apt-get update -y
 sudo apt-get install vim -y
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 cp -r .vimrc ~/.vimrc
+cp -r sonictemplate-vim ~/.vim/bundle/.
 
 # pwntools
 sudo apt-get install python2.7 python-pip python-dev git libssl-dev libffi-dev build-essential -y

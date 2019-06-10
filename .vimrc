@@ -8,6 +8,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'nanotech/jellybeans.vim'
+Plugin 'sonictemplate-vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
