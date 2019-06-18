@@ -12,6 +12,7 @@ cp -r sonictemplate-vim ~/.vim/bundle/.
 sudo apt-get install python2.7 python-pip python-dev git libssl-dev libffi-dev build-essential -y
 sudo pip install --upgrade pip
 sudo pip install --upgrade pwntools
+sudo cp b4sh5i.py /usr/lib/python2.7/dist-packages/
 
 # gdb
 sudo apt-get install gdb
