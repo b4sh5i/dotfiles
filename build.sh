@@ -27,3 +27,8 @@ cp ~/Pwngdb/.gdbinit ~/
 sudo apt-get install gcc g++ -y
 sudo apt-get install gcc-multilib g++-multilib -y
 
+# roptools
+sudo apt-get install ruby-full -y
+sudo gem install one_gadget
+
+
