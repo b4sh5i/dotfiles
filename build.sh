@@ -15,7 +15,7 @@ sudo pip install --upgrade pwntools
 sudo cp b4sh5i.py /usr/lib/python2.7/dist-packages/
 
 # gdb
-sudo apt-get install gdb
+sudo apt-get install gdb -y
 git clone https://github.com/longld/peda.git ~/peda
 echo "source ~/peda/peda.py" >> ~/.gdbinit
 echo "DONE! debug your program with gdb and enjoy"

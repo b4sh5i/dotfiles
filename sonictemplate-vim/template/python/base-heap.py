@@ -5,7 +5,7 @@ e = ELF("./{{_expr_:substitute('{{_input_:name}}', '\w\', '\u\0', '')}}")
 def con():
     if len(sys.argv) == 2:
         s = process("./{{_expr_:substitute('{{_input_:name}}', '\w\', '\u\0', '')}}")
-        gdb_pie_attach(s, 'tracemalloc on')
+        gdb_pie_attach(s, [],'tracemalloc on')
     else:
         s = remote()
     return s
