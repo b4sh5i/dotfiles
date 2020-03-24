@@ -1,5 +1,6 @@
 #!/bin/bash
 
+:<<"END"
 sudo apt-get update -y
 
 # vim
@@ -17,7 +18,7 @@ sudo cp b4sh5i.py /usr/lib/python2.7/dist-packages/
 # gdb
 sudo apt-get install gdb -y
 git clone https://github.com/longld/peda.git ~/peda
-echo "source ~/peda/peda.py" >> ~/.gdbinit
+echo "source ~/peda/peda.py" >> ~/.gdbinitarg
 echo "DONE! debug your program with gdb and enjoy"
 cd ~/
 git clone https://github.com/scwuaptx/Pwngdb.git 
@@ -30,5 +31,12 @@ sudo apt-get install gcc-multilib g++-multilib -y
 # roptools
 sudo apt-get install ruby-full -y
 sudo gem install one_gadget
+END
 
+if [ "$1" = "tmux" ]
+then
+	sudo apt-get install tmux
+else
+	echo "Finish to install b4sh5i dotfile!"
+fi
 

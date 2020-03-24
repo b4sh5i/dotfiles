@@ -18,7 +18,7 @@ def gdb_pie_attach(p,b_off,cmd=""):
         gdb_cmd=""
         for off_set in b_off:
             gdb_cmd+="b *0x%x + 0x%x\n" %(pie_base,off_set)
-        gdb_cmd+=cmd+"c"
+        gdb_cmd+=cmd+"c\n"
         attach_p=gdb.attach(p,gdb_cmd)
         return attach_p
     else:
