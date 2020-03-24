@@ -7,5 +7,4 @@
 
 # 메모
 - https://github.com/b4sh5i/awesome-study
-- https://github.com/deadbits/InsecureProgramming
-
+- https://wiki.sei.cmu.edu/confluence/display/c/SEI+CERT+C+Coding+Standard
